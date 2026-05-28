@@ -1,0 +1,41 @@
+{
+    "name": "max-messenger-bot/max-bot-symfony-bundle",
+    "description": "Symfony bundle for Max Messenger Bot API",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "max-messenger-bot/max-bot-api-php": "^0.3",
+        "symfony/config": "^6.4|^7.0",
+        "symfony/console": "^6.4|^7.0",
+        "symfony/dependency-injection": "^6.4|^7.0",
+        "symfony/http-foundation": "^6.4|^7.0",
+        "symfony/http-kernel": "^6.4|^7.0",
+        "symfony/routing": "^6.4|^7.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^5.3",
+        "codeception/module-asserts": "*",
+        "squizlabs/php_codesniffer": "^4.0",
+        "symfony/framework-bundle": "^6.4|^7.0",
+        "vimeo/psalm": "^6.16"
+    },
+    "scripts": {
+        "test": "codecept run",
+        "phpcs": "phpcs",
+        "psalm": "psalm"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaxMessenger\\Bot\\Bundle\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony": {
+            "require": "^6.4|^7.0"
+        }
+    }
+}
